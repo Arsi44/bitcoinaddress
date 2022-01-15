@@ -55,6 +55,7 @@ class Key:
     @staticmethod
     def of(obj):
         key = Key()
+        # Захожу в if
         if isinstance(obj, Seed):
             key._from_seed(obj)
         else:

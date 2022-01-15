@@ -1,2 +1,5 @@
-base58
-ecdsa
+base58~=2.1.1
+ecdsa~=0.17.0
+quantumrandom~=1.9.0
+requests~=2.27.1
+setuptools~=60.5.0

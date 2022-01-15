@@ -3,15 +3,17 @@
 #  This software is distributed under the terms of the MIT License.
 #  See the file 'LICENSE' in the root directory of the present distribution,
 #  or http://opensource.org/licenses/MIT.
+import time
 
-from bitcoinaddress.key.key import Key
+import quantumrandom
+
 from bitcoinaddress import Address, Seed
+from bitcoinaddress.key.key import Key
 
 
 class Wallet:
-
-    def __init__(self, hash_or_seed=None, testnet=False):
-        if hash_or_seed is None: hash_or_seed = Seed()
+    def __init__(self, hash_or_seed=None, testnet=False, entropy_seed=None):
+        if hash_or_seed is None: hash_or_seed = Seed(entropy_seed=entropy_seed)
         self.key = Key.of(hash_or_seed)
         self.address = Address.of(self.key)
         self.testnet = testnet
@@ -21,6 +23,4 @@ class Wallet:
                                self.address.__str__(self.testnet))
 
 
-if __name__ == "__main__":
-    wallet = Wallet()
-    print(wallet)
+

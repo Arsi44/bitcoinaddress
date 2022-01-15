@@ -1,0 +1,2 @@
+https://bbc.github.io/cloudfit-public-docs/asyncio/asyncio-part-5.html
+https://www.twilio.com/blog/asynchronous-http-requests-in-python-with-aiohttp
